@@ -6,7 +6,8 @@ function createStew() {
     stewHeader.textContent = "Hearty Viking Stew"
     stewWrapper.appendChild(stewHeader)
 
-    return createStew
+    return stewWrapper
 }
+
 
 export default createStew

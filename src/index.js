@@ -1,4 +1,4 @@
-import initializeWebsite from "./website";
+import initializeWebsite from "./pages/website";
 import './style.css'
 
 initializeWebsite()

@@ -1,9 +1,14 @@
-import Github from './images/github-mark-white.png'
-import Feast from './images/feast.jpg'
-import Stew from './images/stew.jpg'
-import Yogurt from './images/yogurt.jpg'
-import Porridge from './images/porridge.jpg'
-import Flatbread from './images/flatbread.png'
+import Github from '../images/github-mark-white.png'
+import Feast from '../images/feast.jpg'
+import Stew from '../images/stew.jpg'
+import Yogurt from '../images/yogurt.jpg'
+import Porridge from '../images/porridge.jpg'
+import Flatbread from '../images/flatbread.png'
+
+import createStew from './stew'
+import createYogurt from './yogurt'
+import creatFlatbread from './flatbread'
+import createPorridge from './porridge'
 
 function createHeader() {
     const header = document.createElement("header")
@@ -12,6 +17,12 @@ function createHeader() {
     const siteName = document.createElement("h1")
     siteName.classList.add("site-name")
     siteName.textContent = "Odin's Recipes"
+
+    siteName.addEventListener("click", () => {
+        const content = document.querySelector(".content")
+        content.textContent = ""
+        initializeWebsite()
+    })
 
     header.appendChild(siteName)
 
@@ -44,13 +55,13 @@ function createMain() {
     recipeGrid.classList.add("recipe-grid")
     recipeWrapper.appendChild(recipeGrid)
 
-    recipeGrid.appendChild(createRecipeCard("Hearty Viking Stew", Stew))
+    recipeGrid.appendChild(createRecipeCard("Hearty Viking Stew", Stew, createStew()))
 
-    recipeGrid.appendChild(createRecipeCard("Viking Flatbread", Flatbread))
+    recipeGrid.appendChild(createRecipeCard("Viking Flatbread", Flatbread, creatFlatbread()))
 
-    recipeGrid.appendChild(createRecipeCard("Skyr with Honey and Nuts", Yogurt))
+    recipeGrid.appendChild(createRecipeCard("Skyr with Honey and Nuts", Yogurt, createYogurt()))
 
-    recipeGrid.appendChild(createRecipeCard("Viking Barley Porridge", Porridge))
+    recipeGrid.appendChild(createRecipeCard("Viking Barley Porridge", Porridge, createPorridge()))
 
     return main
 }
@@ -76,9 +87,7 @@ function createFooter() {
     return footer
 }
 
-<<<<<<< HEAD
-=======
-function createRecipeCard(name, imageSrc) {
+function createRecipeCard(name, imageSrc, recipeLink) {
     const recipeCard = document.createElement("div")
     recipeCard.classList.add("recipe-card")
 
@@ -90,11 +99,18 @@ function createRecipeCard(name, imageSrc) {
     const recipeName = document.createElement("div")
     recipeName.textContent = name
     recipeCard.appendChild(recipeName)
+
+    recipeCard.addEventListener("click", (e) => {
+            if(e.target.classList.contains("active")) return
+            setActiveCard(recipeCard)
+            const main = document.getElementById("main")
+            main.textContent = ""
+            main.appendChild(recipeLink)
+        })
     
     return recipeCard
 }
 
->>>>>>> 332722656bce9c5c9ee995f5037699c535893373
 function setActiveCard(card) {
     const recipeCards = document.querySelectorAll(".recipe-card")
 
@@ -107,17 +123,18 @@ function setActiveCard(card) {
     card.classList.add("active")
 }
 
+function appendToMain(recipeLink) {
+    const main = document.getElementById("main")
+    main.textContent = ""
+    main.appendChild(recipeLink)
+}
+
 function initializeWebsite() {
     const content = document.querySelector(".content")
 
     content.appendChild(createHeader())
     content.appendChild(createMain())
     content.appendChild(createFooter())
-<<<<<<< HEAD
-    setActiveCard()
-    loadHome()
-=======
->>>>>>> 332722656bce9c5c9ee995f5037699c535893373
 }
 
 export default initializeWebsite
