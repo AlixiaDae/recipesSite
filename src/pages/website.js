@@ -1,14 +1,14 @@
+import createStew from './stew'
+import createYogurt from './yogurt'
+import creatFlatbread from './flatbread'
+import createPorridge from './porridge'
+
 import Github from '../images/github-mark-white.png'
 import Feast from '../images/feast.jpg'
 import Stew from '../images/stew.jpg'
 import Yogurt from '../images/yogurt.jpg'
 import Porridge from '../images/porridge.jpg'
 import Flatbread from '../images/flatbread.png'
-
-import createStew from './stew'
-import createYogurt from './yogurt'
-import creatFlatbread from './flatbread'
-import createPorridge from './porridge'
 
 function createHeader() {
     const header = document.createElement("header")

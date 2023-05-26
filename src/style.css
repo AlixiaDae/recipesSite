@@ -36,6 +36,7 @@ h1 {
     box-shadow: -3px 0px 6px gray inset;
     flex: auto;
     display: flex;
+    justify-content: center;
 }
 
 .footer {
@@ -62,13 +63,13 @@ a > img {
 
 /*Main Page Content Selectors*/
 
-
 .feast-image {
     width: 50%;
     height: 900px;
 }
 
-.recipe-wrapper {
+.recipe-wrapper,
+.stew-subwrapper {
     flex: auto;
     display: flex;
     flex-direction: column;
@@ -76,7 +77,8 @@ a > img {
     padding: 40px 15px 15px 15px;
 }
 
-.recipe-subheader {
+.recipe-subheader,
+.stew-header {
     font-family: 'Nordic';
     font-size: 33px;
     letter-spacing: 2px;
@@ -98,7 +100,6 @@ a > img {
 .recipe-card {
     font-size: 20px;
     font-family: 'Nordic';
-    border-radius: 5%;
     padding: 10px;
     width: 350px;
     transition: 0.3s;
@@ -107,7 +108,48 @@ a > img {
 .recipe-card > img {
     height: 300px;
     width: 300px;
-    border-radius: 10%;
+}
+
+/*Stew Selectors*/
+
+.stew-wrapper {
+    display: flex;
+}
+
+.stew-subwrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+
+.ingredients-header,
+.instructions-header {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stew-image {
+    width: 50%;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 1fr ;
+    grid-auto-flow: row;
+    grid-auto-rows: 40px;
+    row-gap: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.ingredient {
+    list-style-type: disc;
     
 }
 
@@ -121,4 +163,8 @@ a > img:hover {
 .recipe-card:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.recipe-card:hover {
+    box-shadow: 3px 3px 5px gray;
 }
