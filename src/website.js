@@ -1,4 +1,5 @@
 import loadHome from "./home"
+import Github from './images/github-mark-white.png'
 
 function createHeader() {
     const header = document.createElement("header")
@@ -26,9 +27,18 @@ function createFooter() {
     footer.classList.add("footer")
 
     const copyright = document.createElement("p")
+    copyright.classList.add("copyright")
     copyright.textContent = `Copyright © ${new Date().getFullYear()} AlixiaDae`
-
     footer.appendChild(copyright)
+
+    const githubLink = document.createElement("a")
+    githubLink.setAttribute("target", "blank")
+    githubLink.href = "https://github.com/AlixiaDae"
+    footer.appendChild(githubLink)
+
+    const githubIcon = document.createElement("img")
+    githubIcon.src = Github
+    githubLink.appendChild(githubIcon)
 
     return footer
 }

@@ -23,6 +23,8 @@ body {
     font-size: 24px;
     font-family: 'Nordic';
     padding: 0;
+    background-color: rgb(153, 3, 3);
+    color: whitesmoke;
 }
 
 h1 {
@@ -36,23 +38,93 @@ h1 {
 }
 
 .footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 10px;
     background-color: black;
     color: whitesmoke;
     font-family: 'Nordic';
     letter-spacing: 2px;
+    font-size: 17px;
 }
 
-/*Content Selectors*/
+a > img {
+    height: 30px;
+}
+
+.copyright {
+    cursor: default;
+}
+
+/*Main Page Content Selectors*/
 
 .home {
     display: flex;
 }
 
 .feast-image {
-    width: 52%;
+    width: 50%;
     height: 900px;
 }
 
+.recipe-wrapper {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 15px 15px 15px;
+}
+
+.recipe-subheader {
+    font-family: 'Nordic';
+    font-size: 33px;
+    letter-spacing: 2px;
+    cursor:  default;
+}
+
 .recipe-grid {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) minmax(300px, auto);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 5px;
+    flex: auto;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.recipe-card {
+    font-size: 20px;
+    font-family: 'Nordic';
+    border-radius: 5%;
+    padding: 10px;
+    width: 350px;
+    transition: 0.3s;
+}
+
+.recipe-card > img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10%;
+    
+}
+
+/*Pseudo-selectors*/
+
+a > img:hover {
+    opacity: 85%;
+}
+
+.site-name:hover,
+.recipe-card:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    box-shadow: 5px 5px 8px grey;
 }
