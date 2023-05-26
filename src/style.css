@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Cedar';
+    src: url('./CedarvilleCursive-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nordic';
+    src: url('./NORDIC\ LIGHT.ttf');
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    font-size: 24px;
+    font-family: 'Nordic';
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0px 20px 50px;
+    letter-spacing: 3px;
+}
+
+.main {
+    box-shadow: -3px 0px 6px gray inset;
+    flex: auto;
+}
+
+.footer {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Nordic';
+    letter-spacing: 2px;
+}
+
+/*Content Selectors*/
+
+.home {
+    display: flex;
+}
+
+.feast-image {
+    width: 52%;
+    height: 900px;
+}
+
+.recipe-grid {
+}
