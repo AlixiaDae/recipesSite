@@ -35,6 +35,7 @@ h1 {
 .main {
     box-shadow: -3px 0px 6px gray inset;
     flex: auto;
+    display: flex;
 }
 
 .footer {
@@ -61,9 +62,6 @@ a > img {
 
 /*Main Page Content Selectors*/
 
-.home {
-    display: flex;
-}
 
 .feast-image {
     width: 50%;
@@ -116,7 +114,7 @@ a > img {
 /*Pseudo-selectors*/
 
 a > img:hover {
-    opacity: 85%;
+    opacity: 80%;
 }
 
 .site-name:hover,
