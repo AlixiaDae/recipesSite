@@ -43,12 +43,25 @@ function createFooter() {
     return footer
 }
 
+function setActiveCard(card) {
+    const recipeCards = document.querySelectorAll(".recipe-card")
+
+    recipeCards.forEach(recipeCard => {
+        if(recipeCard !== this) {
+            recipeCard.classList.remove("active")
+        }
+    });
+
+    card.classList.add("active")
+}
+
 function initializeWebsite() {
     const content = document.querySelector(".content")
 
     content.appendChild(createHeader())
     content.appendChild(createMain())
     content.appendChild(createFooter())
+    setActiveCard()
     loadHome()
 }
 

@@ -124,7 +124,3 @@ a > img:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-
-.recipe-card:hover {
-    box-shadow: 5px 5px 8px grey;
-}
