@@ -91,7 +91,6 @@ nav {
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 100vh;
 }
 
 .footer {
@@ -120,28 +119,24 @@ footer > p {
 
 .home {
     display: flex;
+    flex-direction: column;
     flex: auto;
+}
+
+.subheader-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 600px;
+    width: 100%;
     background-image: url('./images/feast.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.subheader-wrapper {
-    display: flex;
-}
-
-h2 {
-    font-family: 'Bochan';
-    font-size: 30px;
-    margin: 0;
-    margin-top: -10px;
-}
-
-.subheader-one-wrapper {
-    height: 400px;
+.motto-wrapper {
+    height: 300px;
     padding-right: 45px;
     padding-left: 45px;
     text-align: center;
@@ -152,13 +147,80 @@ h2 {
     border-radius: 20px;
     border: 2px solid black;
     background-color: whitesmoke;
-    opacity: 85%;
+    opacity: 90%;
 }
 
-.subheader-one-content {
-    font-size: 24px;
+.motto-wrapper > h2 {
+    font-family: 'Nordic';
+    font-size: 33px;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-top: -10px;
+    cursor: default;
+}
+
+.motto-content {
+    font-family: 'Roboto-thin';
+    font-size: 20px;
+    font-weight: bold;
     width: 510px;
     margin-bottom: -30px;
+    cursor: default;
+}
+
+.today-wrapper {
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+
+.today-wrapper > h2 {
+    font-family: 'Nordic';
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin-top: 60px;
+}
+
+.today-recipe-wrapper {
+    display: flex;
+    padding: 30px;
+    text-align: center;
+}
+
+.special-wrapper {
+    display: flex;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.today-card {
+    box-shadow: 3px 3px 5px gray;
+    padding: 30px; 
+    border-radius: 5px;
+    margin-left: 10%;
+}
+
+.today-card > img {
+    height: 300px;  
+    border-radius: 5px;
+}
+
+.today-card > div {
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+.description-wrapper {
+    width: 400px;
+    font-family: 'Roboto';
+    font-size: 45px;
+    margin-right: 10%;
+}
+
+.description-wrapper > img {
+    margin-top: 10px;
 }
 
 /*Pseudo-Selectors*/
@@ -178,7 +240,13 @@ h1:hover,
 }
 
 .searchbar-wrapper > input:focus::placeholder {
-    color: transparent;
+    opacity: 40%;
+}
+
+.today-card:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    box-shadow: 5px 5px 7px rgb(107, 107, 107);
 }
 
 .github-icon:hover {
