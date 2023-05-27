@@ -57,10 +57,11 @@ nav {
 }
 
 .main {
-    box-shadow: -3px 0px 6px gray inset;
     flex: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
 }
 
 .footer {
@@ -81,9 +82,66 @@ nav {
     height: 25px;
 }
 
+footer > p {
+    cursor: default;
+}
+
+/*Homepage*/
+
+
+.feast-image {
+    height: 500px;
+    width: 100%;
+}
+
+.subheader-wrapper {
+    display: flex;
+    padding: 50px;
+}
+
+h2 {
+    font-family: 'Cedar';
+    font-size: 40px;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.subheader-one-wrapper {
+    width: 400px;
+    padding: 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px solid gray;
+    box-shadow: 3px 3px 3px gray;
+    margin-left: 30px;
+}
+
+.subheader-one-content {
+    font-size: 20px;
+    width: 510px;
+    margin: 0;
+}
+
+
+
+
 /*Pseudo-Selectors*/
 
+h1:hover,
 .button-nav:hover {
-    text-decoration: underline;
     cursor: pointer;
+    text-decoration: underline;
 }
+
+.button-nav:hover {
+    font-weight: bold;
+}
+
+.github-icon:hover {
+    opacity: 80%;
+}
+
+
