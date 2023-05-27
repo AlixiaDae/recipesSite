@@ -18,6 +18,11 @@
     src: url('./fonts/Roboto-Thin.ttf');
 }
 
+@font-face {
+    font-family: 'Bochan';
+    src: url('./fonts/Bochan-Ea3Ge.otf');
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -113,41 +118,47 @@ footer > p {
 
 /*Homepage*/
 
-
-.feast-image {
-    height: 500px;
-    width: 100%;
+.home {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./images/feast.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .subheader-wrapper {
     display: flex;
-    padding: 50px;
 }
 
 h2 {
-    font-family: 'Cedar';
-    font-size: 40px;
+    font-family: 'Bochan';
+    font-size: 30px;
     margin: 0;
     margin-top: -10px;
 }
 
 .subheader-one-wrapper {
-    width: 400px;
-    padding: 90px;
+    height: 400px;
+    padding-right: 45px;
+    padding-left: 45px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-radius: 20px;
-    border: 2px solid gray;
-    box-shadow: 3px 3px 3px gray;
-    margin-left: 30px;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    opacity: 85%;
 }
 
 .subheader-one-content {
-    font-size: 20px;
+    font-size: 24px;
     width: 510px;
-    margin: 0;
+    margin-bottom: -30px;
 }
 
 /*Pseudo-Selectors*/

@@ -4,10 +4,6 @@ function createHome() {
     const home = document.createElement("div");
     home.classList.add("home");
 
-    const feastImage = document.createElement("img")
-    feastImage.src = Feast
-    feastImage.classList.add("feast-image")
-
     const subHeaderWrapper = document.createElement("div")
     subHeaderWrapper.classList.add("subheader-wrapper")
 
@@ -21,8 +17,6 @@ function createHome() {
     subheaderOneContent.classList.add("subheader-one-content")
     subheaderOneContent.textContent = "Straight from the fields of Freyr, only the freshest and most delicious of ingredients and recipes for the Einherjar"
 
-
-    //home.appendChild(feastImage)
     home.appendChild(subHeaderWrapper)
     subHeaderWrapper.appendChild(subheaderOneWrapper)
     subheaderOneWrapper.appendChild(subheaderOne)
