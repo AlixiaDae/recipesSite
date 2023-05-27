@@ -25,35 +25,52 @@ body {
 }
 
 .header {
-    font-size: 24px;
-    font-family: 'Nordic';
-    padding: 0;
-    background-color: rgb(153, 3, 3);
-    color: whitesmoke;
-    display: flex;
+    padding-top: 10px;
+    padding-bottom: 15px;
     align-items: center;
-    justify-content: space-between;
+    box-shadow: 0px 3px 5px rgb(148, 147, 147);
 }
 
 h1 {
-    margin: 20px 0px 20px 50px;
+    font-size: 40px;
+    font-family: 'Nordic';
+    margin: 20px 0px 10px 20%;
     letter-spacing: 3px;
+    width: fit-content;
 }
 
 nav {
-    margin-top: 10px;
-    margin-right: 50px;
+    margin-left: 20%;
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+}
+
+.navbutton-wrapper {
+    display: flex;
+    gap: 10px;
 }
 
 .button-nav {
     border: none;
     background-color: transparent;
-    font-size: 25px;
-    font-family: 'Nordic';
-    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Roboto';
     letter-spacing: 1.3px;
+    margin-left: -5px;
+}
+
+.searchbar-wrapper {
+    margin-right: 20%;
+    margin-top: -2.5%;
+}
+
+.searchbar-wrapper > input {
+    height: 30px;
+    border: none;
+    box-shadow: 0px -3px rgb(0, 0, 0) inset;
+    font-size: 17px;
+    width: 200px;
+    padding: 0;
 }
 
 .main {
@@ -125,9 +142,6 @@ h2 {
     margin: 0;
 }
 
-
-
-
 /*Pseudo-Selectors*/
 
 h1:hover,
@@ -138,6 +152,10 @@ h1:hover,
 
 .button-nav:hover {
     font-weight: bold;
+}
+
+.searchbar-wrapper > input:focus {
+    outline: none;
 }
 
 .github-icon:hover {

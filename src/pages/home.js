@@ -22,7 +22,7 @@ function createHome() {
     subheaderOneContent.textContent = "Straight from the fields of Freyr, only the freshest and most delicious of ingredients and recipes for the Einherjar"
 
 
-    home.appendChild(feastImage)
+    //home.appendChild(feastImage)
     home.appendChild(subHeaderWrapper)
     subHeaderWrapper.appendChild(subheaderOneWrapper)
     subheaderOneWrapper.appendChild(subheaderOne)

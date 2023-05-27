@@ -17,6 +17,9 @@ function createHeader() {
 function createNav() {
     const nav = document.createElement("nav")
 
+    const navButtonWrapper = document.createElement("div")
+    navButtonWrapper.classList.add("navbutton-wrapper")
+
     const homeButton = document.createElement("button");
     homeButton.classList.add("button-nav");
     homeButton.textContent = "Home";
@@ -43,10 +46,21 @@ function createNav() {
       setActiveButton(aboutButton);
       loadContact();
     });
-  
-    nav.appendChild(homeButton);
-    nav.appendChild(recipeButton);
-    nav.appendChild(aboutButton);
+
+    const searchBarWrapper = document.createElement("div")
+    searchBarWrapper.classList.add("searchbar-wrapper")
+
+    const searchbar = document.createElement("input")
+    searchbar.setAttribute("type", "text")
+    searchbar.setAttribute("id", "search")
+    searchbar.placeholder = "Search Recipes..."
+    
+    nav.appendChild(navButtonWrapper)
+    navButtonWrapper.appendChild(homeButton);
+    navButtonWrapper.appendChild(recipeButton);
+    navButtonWrapper.appendChild(aboutButton);
+    nav.appendChild(searchBarWrapper)
+    searchBarWrapper.appendChild(searchbar)
 
     return nav
 }
