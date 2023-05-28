@@ -22,6 +22,7 @@ function createNav() {
 
     const homeButton = document.createElement("button");
     homeButton.classList.add("button-nav");
+    homeButton.setAttribute("id", "home")
     homeButton.textContent = "Home";
     homeButton.addEventListener("click", (e) => {
       if (e.target.classList.contains("active")) return;
@@ -35,7 +36,7 @@ function createNav() {
     recipeButton.addEventListener("click", (e) => {
       if (e.target.classList.contains("active")) return;
       setActiveButton(recipeButton);
-      loadMenu();
+      loadRecipe();
     });
   
     const aboutButton = document.createElement("button");

@@ -223,6 +223,67 @@ footer > p {
     margin-top: 10px;
 }
 
+/*Stew page*/
+
+.stew-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.stew-header {
+    text-align: center;
+    padding: 30px;
+    margin: 0;
+    font-family: 'Nordic';
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.stew-subwrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 30px;
+}
+
+.today-card,
+.stew-content-wrapper {
+    box-shadow: 3px 3px 5px gray;
+    padding: 30px; 
+    border-radius: 5px;
+}
+
+.stew-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 50px;
+}
+
+.ingredients-header,
+.instructions-header {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+.ingredients-grid,
+.instructions-grid {
+    font-family: 'Roboto-thin';
+    font-weight: bold;
+}
+
+ol {
+    padding: 0;
+    width: 500px;
+}
+
+.stew-image {
+    width: 50%;
+    border-radius: 5px;
+}
+
+
 /*Pseudo-Selectors*/
 
 h1:hover,

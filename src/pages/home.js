@@ -2,6 +2,8 @@ import Feast from '../images/feast.jpg'
 import Stew from '../images/stew.jpg'
 import Star from '../images/star.jpg'
 
+import createStew from './stew';
+
 function createHome() {
     const home = document.createElement("div");
     home.classList.add("home");
@@ -28,7 +30,7 @@ function createHome() {
     const todayRecipeWrapper = document.createElement("div")
     todayRecipeWrapper.classList.add("today-recipe-wrapper")
 
-    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"'))
+    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"', createStew()))
 
     home.appendChild(subHeaderWrapper)
     home.appendChild(todayWrapper)
@@ -41,7 +43,7 @@ function createHome() {
     return home;
   }
   
-function createTodayRecipe(name, imageSrc, starSrc, description) {
+function createTodayRecipe(name, imageSrc, starSrc, description, pageLink) {
     const wrapper = document.createElement("div")
     wrapper.classList.add("special-wrapper")
     
@@ -64,6 +66,22 @@ function createTodayRecipe(name, imageSrc, starSrc, description) {
 
     const starRating = document.createElement("img")
     starRating.src = starSrc
+
+    todayCard.addEventListener("click", () => {
+      const main = document.getElementById("main")
+      main.textContent = ""
+      main.appendChild(pageLink)
+    })
+
+    todayCard.addEventListener("click", () => {
+      const buttons = document.querySelectorAll(".button-nav")
+
+      buttons.forEach(button => {
+        if(button !== this) {
+          button.classList.remove("active")
+        }
+      })
+    })
     
     wrapper.appendChild(todayCard)
     wrapper.appendChild(descriptionWrapper)
