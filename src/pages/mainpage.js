@@ -8,6 +8,19 @@ function createHeader() {
     const siteName = document.createElement("h1")
     siteName.textContent = "Mead Hall"
 
+    siteName.addEventListener("click", () => {
+      loadHome()
+    })
+    siteName.addEventListener("click", () => {
+      const buttons = document.querySelectorAll(".button-nav")
+
+      buttons.forEach(button => {
+        if(button !== this) {
+          button.classList.remove("active")
+        }})
+    })
+
+
     header.appendChild(siteName)
     header.appendChild(createNav())
 
