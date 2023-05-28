@@ -5,6 +5,10 @@ export class Recipe {
         this.instructions = []
     }
 
+    getName() {
+        return this.name
+    }
+
     addIngredients(newIngredient) {
         this.ingredients.push(newIngredient)
     }
@@ -21,3 +25,4 @@ export class Recipe {
         return this.instructions
     }
 }
+

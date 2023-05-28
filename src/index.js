@@ -1,30 +1,29 @@
-import { Cookbook } from './pages/cookbookModule'
 import initializeWebsite from './pages/mainpage'
-import { Recipe } from './pages/recipeClass'
 import './style.css'
+import { Recipe } from './pages/recipeClass'
+import { Cookbook } from './pages/cookbookModule'
 
 initializeWebsite()
 
-const flatbread = new Recipe("Viking Flatbread")
 const stew = new Recipe("Hearty Viking Stew")
 stew.addIngredients("1 lb beef or venison, cubed")
 stew.addIngredients("2 onions, chopped")
 stew.addIngredients("3 carrots, chopped")
-/*
-1 lb beef or venison, cubed
-2 onions, chopped
-3 carrots, chopped
-2 parsnips, chopped
-2 turnips, chopped
-4 cups beef broth
-2 tbsp butter
-1 tbsp salt
-1 tsp ground black pepper
-1 tsp dried thyme
-1 tsp dried sage*/
-console.log(stew)
+stew.addIngredients("2 parsnips, chopped")
+stew.addIngredients("2 turnips, chopped")
+stew.addIngredients("4 cups beef broth")
+stew.addIngredients("2 tbsp butter")
+stew.addIngredients("1 tbsp salt")
+stew.addIngredients("1 tsp ground black pepper")
+stew.addIngredients("1 tsp dried thyme")
+stew.addIngredients("1 tsp dried sage")
+
+stew.addInstructions("In a large pot, melt the butter over medium heat. Add the onions and cook until softened.")
+stew.addInstructions("Add the meat and cook until browned on all sides.")
+stew.addInstructions("Stir in the carrots, parsnips, turnips, salt, pepper, thyme, sage, and rosemary.")
+stew.addInstructions("Pour in the beef broth, bring to a boil, then reduce the heat and let it simmer for 1-2 hours, or until the meat is tender and the vegetables are cooked through.")
+stew.addInstructions("Serve hot with a side of Viking Flatbread or rustic rye bread.")
 
 const cookBook = new Cookbook()
 cookBook.addRecipe(stew)
-cookBook.addRecipe(flatbread)
-console.log(cookBook.getRecipe(stew.getIngredients()))
+console.log(cookBook.getRecipe(stew.getName()))

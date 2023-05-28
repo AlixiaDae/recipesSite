@@ -5,6 +5,7 @@ Font designed by Sahirul Sugih at <a>https://justtheskills.com/vendor/tokokoo/</
 
 Font designed by Burhan Afif at <a>https://hanscostudio.com</a>
 
+Site Icon from <a href="https://www.flaticon.com/free-icons/nordic" title="nordic icons">Nordic icons created by Freepik - Flaticon</a>
 
 Photo by <a href="https://unsplash.com/@brookelark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brooke Lark</a> on <a href="https://unsplash.com/photos/_v3fy536vpk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 

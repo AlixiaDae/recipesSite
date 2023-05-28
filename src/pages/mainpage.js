@@ -1,9 +1,29 @@
 import Github from '../images/github.png'
+import Odin from '../images/odin.png'
 import loadHome from './home'
 
 function createHeader() {
     const header = document.createElement("div")
     header.classList.add("header")
+
+    const siteNameWrapper = document.createElement("div")
+    siteNameWrapper.classList.add("site-name-wrapper")
+    
+    const siteNameImg = document.createElement("img")
+    siteNameImg.classList.add("site-name-image")
+    siteNameImg.src = Odin
+
+    siteNameImg.addEventListener("click", () => {
+      loadHome()
+    })
+    siteNameImg.addEventListener("click", () => {
+      const buttons = document.querySelectorAll(".button-nav")
+
+      buttons.forEach(button => {
+        if(button !== this) {
+          button.classList.remove("active")
+        }})
+    })
 
     const siteName = document.createElement("h1")
     siteName.textContent = "Mead Hall"
@@ -20,8 +40,9 @@ function createHeader() {
         }})
     })
 
-
-    header.appendChild(siteName)
+    header.appendChild(siteNameWrapper)
+    siteNameWrapper.appendChild(siteNameImg)
+    siteNameWrapper.appendChild(siteName)
     header.appendChild(createNav())
 
     return header

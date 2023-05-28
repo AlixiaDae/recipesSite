@@ -41,12 +41,22 @@ body {
     box-shadow: 0px 3px 5px rgb(148, 147, 147);
 }
 
+.site-name-wrapper {
+    margin: 0px 0px 0px 16%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.site-name-image {
+    height: 50px;
+}
+
 h1 {
     font-size: 40px;
     font-family: 'Nordic';
-    margin: 20px 0px 10px 20%;
     letter-spacing: 3px;
-    width: fit-content;
 }
 
 nav {
@@ -178,7 +188,7 @@ footer > p {
     font-family: 'Nordic';
     font-size: 35px;
     letter-spacing: 4px;
-    margin-top: 60px;
+    margin-top: 50px;
 }
 
 .today-recipe-wrapper {
@@ -286,7 +296,7 @@ ol {
 
 /*Pseudo-Selectors*/
 
-h1:hover,
+.site-name-wrapper:hover,
 .button-nav:hover {
     cursor: pointer;
     text-decoration: underline;
