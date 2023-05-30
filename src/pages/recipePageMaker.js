@@ -41,7 +41,7 @@ function appendRecipeCard(recipe) {
     const ingredientsArray = recipe.getIngredients()
 
     for(let i = 0; i < ingredientsArray.length; i++) {
-        const ingredient = document.createElement("div")
+        const ingredient = document.createElement("li")
         ingredient.textContent = ingredientsArray[i]
 
         ingredientsGrid.appendChild(ingredient)
@@ -56,19 +56,22 @@ function appendRecipeCard(recipe) {
     const instructionsGrid = document.createElement("div")
     instructionsGrid.classList.add("instructions-grid")
 
+    const instructionsWrapper = document.createElement("ol")
+
     const instructionsArray = recipe.getInstructions()
 
     for(let i = 0; i < instructionsArray.length; i++) {
-        const instruction = document.createElement("div")
+        const instruction = document.createElement("li")
         instruction.textContent = instructionsArray[i]
 
-        instructionsGrid.appendChild(instruction)
+        instructionsWrapper.appendChild(instruction)
     }
 
     recipeCardWrapper.appendChild(ingredientsHeader)
     recipeCardWrapper.appendChild(ingredientsGrid)
     recipeCardWrapper.appendChild(instructionsHeader)
     recipeCardWrapper.appendChild(instructionsGrid)
+    instructionsGrid.appendChild(instructionsWrapper)
 
     return recipeCardWrapper
     

@@ -282,11 +282,13 @@ footer > p {
 .instructions-grid {
     font-family: 'Roboto-thin';
     font-weight: bold;
+    margin-top: 10px;
 }
 
 ol {
     padding: 0;
     width: 500px;
+    margin: 0px;
 }
 
 .recipe-image {

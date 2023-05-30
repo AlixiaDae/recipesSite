@@ -2,15 +2,8 @@ import Feast from '../images/feast.jpg'
 import Stew from '../images/stew.jpg'
 import Star from '../images/star.jpg'
 
-import createStew from './stew';
-
-import appendRecipe from './recipemodule';
-import { Cookbook } from './cookbookModule';
-import { Recipe } from './recipeClass';
-
-const cookBook = new Cookbook()
-
-const stew = new Recipe("Hearty Viking Stew", Stew)
+import appendRecipe from './recipePageMaker';
+import book from './cookbook'
 
 function createHome() {
     const home = document.createElement("div");
@@ -38,7 +31,7 @@ function createHome() {
     const todayRecipeWrapper = document.createElement("div")
     todayRecipeWrapper.classList.add("today-recipe-wrapper")
 
-    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"', appendRecipe(stew)))
+    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"', appendRecipe(book.getRecipe("Hearty Viking Stew"))))
 
     home.appendChild(subHeaderWrapper)
     home.appendChild(todayWrapper)
@@ -106,5 +99,7 @@ function loadHome() {
     main.textContent = "";
     main.appendChild(createHome());
 }
+
+
   
-  export default loadHome;
+export default loadHome;
