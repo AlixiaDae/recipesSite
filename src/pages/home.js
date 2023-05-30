@@ -4,6 +4,14 @@ import Star from '../images/star.jpg'
 
 import createStew from './stew';
 
+import appendRecipe from './recipemodule';
+import { Cookbook } from './cookbookModule';
+import { Recipe } from './recipeClass';
+
+const cookBook = new Cookbook()
+
+const stew = new Recipe("Hearty Viking Stew", Stew)
+
 function createHome() {
     const home = document.createElement("div");
     home.classList.add("home");
@@ -30,7 +38,7 @@ function createHome() {
     const todayRecipeWrapper = document.createElement("div")
     todayRecipeWrapper.classList.add("today-recipe-wrapper")
 
-    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"', createStew()))
+    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"', appendRecipe(stew)))
 
     home.appendChild(subHeaderWrapper)
     home.appendChild(todayWrapper)

@@ -1,6 +1,7 @@
 export class Recipe {
-    constructor(name) {
+    constructor(name, imageSrc) {
         this.name = name
+        this.src = imageSrc
         this.ingredients = []
         this.instructions = []
     }
@@ -23,6 +24,10 @@ export class Recipe {
 
     getInstructions() {
         return this.instructions
+    }
+
+    getImageSrc() {
+        return this.src
     }
 }
 

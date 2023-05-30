@@ -233,14 +233,21 @@ footer > p {
     margin-top: 10px;
 }
 
-/*Stew page*/
+.today-card,
+.recipe-content-wrapper {
+    box-shadow: 3px 3px 5px gray;
+    padding: 30px; 
+    border-radius: 5px;
+}
 
-.stew-wrapper {
+/*Individual recipe pages*/
+
+.wrapper {
     display: flex;
     flex-direction: column;
 }
 
-.stew-header {
+.recipe-header {
     text-align: center;
     padding: 30px;
     margin: 0;
@@ -249,25 +256,19 @@ footer > p {
     letter-spacing: 1px;
 }
 
-.stew-subwrapper {
+.recipe-subwrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    gap: 30px;
+    gap: 110px;
 }
 
-.today-card,
-.stew-content-wrapper {
-    box-shadow: 3px 3px 5px gray;
-    padding: 30px; 
-    border-radius: 5px;
-}
-
-.stew-content-wrapper {
+.recipe-content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-left: 50px;
+    height: fit-content;
 }
 
 .ingredients-header,
@@ -288,9 +289,9 @@ ol {
     width: 500px;
 }
 
-.stew-image {
-    width: 50%;
-    border-radius: 5px;
+.recipe-image {
+    width: 40%;
+    border-radius: 15px;
 }
 
 
