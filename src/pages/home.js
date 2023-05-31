@@ -30,7 +30,7 @@ function createHome() {
     const todayRecipeWrapper = document.createElement("div")
     todayRecipeWrapper.classList.add("today-recipe-wrapper")
 
-    todayRecipeWrapper.appendChild(createTodayRecipe("Hearty Viking Stew", Stew, Star, '"A stew fit for a warrior after a long day\'s battle"', appendRecipe(book.getRecipe("Hearty Viking Stew"))))
+    todayRecipeWrapper.appendChild(createTodayRecipe(book.getRecipe("Viking Flatbread"), Star))
 
     home.appendChild(subHeaderWrapper)
     home.appendChild(todayWrapper)
@@ -43,7 +43,7 @@ function createHome() {
     return home;
   }
   
-function createTodayRecipe(name, imageSrc, starSrc, description, pageLink) {
+function createTodayRecipe(cookbook, starSrc) {
     const wrapper = document.createElement("div")
     wrapper.classList.add("special-wrapper")
     
@@ -51,18 +51,19 @@ function createTodayRecipe(name, imageSrc, starSrc, description, pageLink) {
     todayCard.classList.add("today-card")
 
     const recipeImage = document.createElement("img")
-    recipeImage.src = imageSrc
-    recipeImage.alt = name
+    recipeImage.src = cookbook.getImageSrc()
+    recipeImage.alt = cookbook.getName()
 
     const recipeName = document.createElement("div")
-    recipeName.textContent = name
+    recipeName.textContent = cookbook.getName()
 
     const descriptionWrapper = document.createElement("div")
     descriptionWrapper.classList.add("description-wrapper")
 
     const recipeDescription = document.createElement("div")
     recipeDescription.classList.add("description")
-    recipeDescription.textContent = description
+    const description = cookbook.getDescription()
+    recipeDescription.textContent = `"${description}"`
 
     const starRating = document.createElement("img")
     starRating.src = starSrc
@@ -70,7 +71,7 @@ function createTodayRecipe(name, imageSrc, starSrc, description, pageLink) {
     todayCard.addEventListener("click", () => {
       const main = document.getElementById("main")
       main.textContent = ""
-      main.appendChild(pageLink)
+      main.appendChild(appendRecipe(book.getRecipe(cookbook.getName())))
     })
 
     todayCard.addEventListener("click", () => {

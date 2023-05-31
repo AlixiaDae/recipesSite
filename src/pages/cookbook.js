@@ -6,7 +6,7 @@ import Yogurt from '../images/yogurt.jpg'
 import Porridge from '../images/porridge.jpg'
 
 const book = new CookBook()
-const stew = new Recipe("Hearty Viking Stew", Stew)
+const stew = new Recipe("Hearty Viking Stew", Stew, "A stew fit for a warrior after a long day's battle.")
 stew.addIngredients("1 lb beef or venison, cubed")
 stew.addIngredients("2 onions, chopped")
 stew.addIngredients("3 carrots, chopped")
@@ -24,11 +24,11 @@ stew.addInstructions("Stir in the carrots, parsnips, turnips, salt, pepper, thym
 stew.addInstructions("Pour the beef broth, bring to a boil, then reduce the heat and let it simmer for 1-2 hours, or until the meat is tender and the vegetables are cooked through.")
 stew.addInstructions("Serve hot with a side of Viking flatbread or rustic rye bread.")
 
-const flatbread = new Recipe("Viking Flatbread", Flatbread)
+const flatbread = new Recipe("Viking Flatbread", Flatbread, "Simple and filling, a perfect vehicle for delicious treats.")
 
-const yogurt = new Recipe("Skyr with Honey and Nuts", Yogurt)
+const yogurt = new Recipe("Skyr with Honey and Nuts", Yogurt, "Sweetened with honey, add your favorite berries and nuts for a healthy snack.")
 
-const porridge = new Recipe("Viking Barley Porridge", Porridge)
+const porridge = new Recipe("Viking Barley Porridge", Porridge, "The staple of staples. Change it with every season.")
 
 
 book.addRecipe(stew)

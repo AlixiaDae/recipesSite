@@ -345,7 +345,8 @@ ol {
     opacity: 40%;
 }
 
-.today-card:hover {
+.today-card:hover,
+.recipe-card:hover {
     text-decoration: underline;
     cursor: pointer;
     box-shadow: 5px 5px 7px rgb(107, 107, 107);
