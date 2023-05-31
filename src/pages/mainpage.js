@@ -1,6 +1,7 @@
 import Github from '../images/github.png'
 import Odin from '../images/odin.png'
 import loadHome from './home'
+import loadRecipe from './recipepage'
 
 function createHeader() {
     const header = document.createElement("div")

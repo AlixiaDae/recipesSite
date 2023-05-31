@@ -11,4 +11,8 @@ export class CookBook {
         return this.recipes.find(recipe => recipe.name === recipeName)
     }
 
+    getRecipes() {
+        return this.recipes
+    }
+
 }

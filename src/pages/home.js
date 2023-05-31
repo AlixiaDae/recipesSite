@@ -1,4 +1,3 @@
-import Feast from '../images/feast.jpg'
 import Stew from '../images/stew.jpg'
 import Star from '../images/star.jpg'
 

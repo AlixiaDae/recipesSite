@@ -1,6 +1,9 @@
 import { CookBook } from './cookbookClass'
 import { Recipe } from './recipeClass'
 import Stew from '../images/stew.jpg'
+import Flatbread from '../images/flatbread.png'
+import Yogurt from '../images/yogurt.jpg'
+import Porridge from '../images/porridge.jpg'
 
 const book = new CookBook()
 const stew = new Recipe("Hearty Viking Stew", Stew)
@@ -21,9 +24,16 @@ stew.addInstructions("Stir in the carrots, parsnips, turnips, salt, pepper, thym
 stew.addInstructions("Pour the beef broth, bring to a boil, then reduce the heat and let it simmer for 1-2 hours, or until the meat is tender and the vegetables are cooked through.")
 stew.addInstructions("Serve hot with a side of Viking flatbread or rustic rye bread.")
 
+const flatbread = new Recipe("Viking Flatbread", Flatbread)
+
+const yogurt = new Recipe("Skyr with Honey and Nuts", Yogurt)
+
+const porridge = new Recipe("Viking Barley Porridge", Porridge)
+
 
 book.addRecipe(stew)
-
-console.log(book.getRecipe("Hearty Viking Stew"))
+book.addRecipe(flatbread)
+book.addRecipe(yogurt)
+book.addRecipe(porridge)
 
 export default book
