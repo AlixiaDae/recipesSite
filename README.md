@@ -1,7 +1,7 @@
 # recipesSite
 Odin Project Recipes
 
-Live Demo at <a href="https://alixiadae.github.io/recipesSite/">Mead Hall</a>
+Live Demo at <a href="https://alixiadae.github.io/recipesSite/" target="blank">Mead Hall</a>
 
 Font designed by Sahirul Sugih at <a>https://justtheskills.com/vendor/tokokoo/</a>
 
