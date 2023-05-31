@@ -30,7 +30,7 @@ function createHome() {
     const todayRecipeWrapper = document.createElement("div")
     todayRecipeWrapper.classList.add("today-recipe-wrapper")
 
-    todayRecipeWrapper.appendChild(createTodayRecipe(book.getRecipe("Viking Flatbread"), Star))
+    todayRecipeWrapper.appendChild(createTodayRecipe(book.getRecipe("Skyr with Honey and Nuts"), Star))
 
     home.appendChild(subHeaderWrapper)
     home.appendChild(todayWrapper)
