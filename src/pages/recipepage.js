@@ -1,4 +1,5 @@
 import book from "./cookbook"
+import appendRecipe from "./recipePageMaker"
 
 function createRecipe() {
     const wrappper = document.createElement("div")
@@ -34,6 +35,22 @@ function showRecipes(cookbook) {
 
         const cardName = document.createElement("div")
         cardName.textContent = bookArray[i].getName()
+
+        card.addEventListener("click", () => {
+            const main = document.getElementById("main")
+            main.textContent = ""
+            main.appendChild(appendRecipe(bookArray[i]))
+        })
+
+        card.addEventListener("click", () => {
+            const buttons = document.querySelectorAll(".button-nav")
+
+      buttons.forEach(button => {
+        if(button !== this) {
+          button.classList.remove("active")
+        }
+      })
+    })
 
         grid.appendChild(card)
         card.appendChild(cardImage)

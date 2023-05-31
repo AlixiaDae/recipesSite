@@ -47,6 +47,7 @@ body {
     align-items: center;
     gap: 10px;
     width: fit-content;
+    height: 90px;
 }
 
 .site-name-image {
@@ -318,7 +319,8 @@ ol {
 }
 
 .recipe-image {
-    width: 40%;
+    width: 500px;
+    height: 500px;
     border-radius: 15px;
 }
 
