@@ -162,7 +162,7 @@ footer > p {
 }
 
 .motto-wrapper > h2 {
-    font-family: 'Nordic';
+    font-family: 'Bochan';
     font-size: 33px;
     letter-spacing: 2px;
     margin: 0;
@@ -278,7 +278,8 @@ footer > p {
     text-align: center;
     padding: 30px;
     margin: 0;
-    font-family: 'Nordic';
+    font-family: 'Bochan';
+    font-weight: bold;
     font-size: 30px;
     letter-spacing: 1px;
 }
@@ -310,6 +311,7 @@ footer > p {
     font-family: 'Roboto-thin';
     font-weight: bold;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 ol {
@@ -322,6 +324,36 @@ ol {
     width: 500px;
     height: 500px;
     border-radius: 15px;
+}
+
+/*About page*/
+
+.about {
+    display: flex;
+    align-items: center;
+}
+
+.about > img {
+    width: 50%;
+    height: 800px;
+}
+
+.about-page-second-subwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+}
+
+.about-page-second-subwrapper-content {
+    width: 400px;
+    font-family: 'Bochan';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 30px;
 }
 
 

@@ -2,6 +2,7 @@ import Github from '../images/github.png'
 import Odin from '../images/odin.png'
 import loadHome from './home'
 import loadRecipe from './recipepage'
+import loadAbout from './aboutpage'
 
 function createHeader() {
     const header = document.createElement("div")
@@ -80,7 +81,7 @@ function createNav() {
     aboutButton.addEventListener("click", (e) => {
       if (e.target.classList.contains("active")) return;
       setActiveButton(aboutButton);
-      loadContact();
+      loadAbout();
     });
 
     const searchBarWrapper = document.createElement("div")

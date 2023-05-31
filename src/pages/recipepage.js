@@ -7,7 +7,7 @@ function createRecipe() {
 
     const header = document.createElement("div")
     header.classList.add("recipe-page-header")
-    header.textContent = "Recipes"
+    header.textContent = "Odin's Recipes"
 
     const recipeGridWrapper = document.createElement("div")
     recipeGridWrapper.classList.add("recipe-grid-wrapper")
